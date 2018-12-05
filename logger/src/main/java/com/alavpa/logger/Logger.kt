@@ -11,18 +11,22 @@ import android.view.View.OnDragListener
 import android.view.ViewGroup
 import android.widget.LinearLayout
 
-class Logger(layout: Int, activity: Activity) {
+class Logger(layout: Int, activty: Activity, setContentView: (Int) -> Unit) {
 
     init {
         if (BuildConfig.DEBUG) {
-            setDebugContentView(layout, activity)
+            setDebugContentView(activty, layout, setContentView)
         } else {
-            setContentView(layout, activity)
+            setContentView(layout)
         }
     }
 
-    private fun setDebugContentView(layout: Int, activity: Activity) {
-        activity.setContentView(R.layout.activity_base)
+    private fun setDebugContentView(
+        activity: Activity,
+        layout: Int,
+        setContentView: (Int) -> Unit
+    ) {
+        setContentView(R.layout.activity_base)
 
         val rootView: ViewGroup = activity.findViewById(R.id.root)
 
