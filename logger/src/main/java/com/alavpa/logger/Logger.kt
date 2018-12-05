@@ -26,7 +26,7 @@ class Logger(layout: Int, activty: Activity, setContentView: (Int) -> Unit) {
         layout: Int,
         setContentView: (Int) -> Unit
     ) {
-        setContentView(R.layout.activity_base)
+        setContentView(R.layout.activity_logger_base)
 
         val rootView: ViewGroup = activity.findViewById(R.id.root)
 

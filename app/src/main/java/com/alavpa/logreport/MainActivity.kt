@@ -12,6 +12,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //startActivity(Intent(this, LogActivity::class.java))
+        startActivity(Intent(this, LogActivity::class.java))
     }
 }

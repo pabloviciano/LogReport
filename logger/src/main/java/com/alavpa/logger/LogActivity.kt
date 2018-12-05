@@ -8,11 +8,10 @@ import io.reactivex.ObservableEmitter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_log.clearFab
-import kotlinx.android.synthetic.main.activity_log.logList
+import kotlinx.android.synthetic.main.activity_logger_log.clearFab
+import kotlinx.android.synthetic.main.activity_logger_log.logList
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.util.concurrent.TimeUnit
 
 
 class LogActivity : AppCompatActivity() {
@@ -23,7 +22,7 @@ class LogActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_log)
+        setContentView(R.layout.activity_logger_log)
 
         val pid = android.os.Process.myPid()
         val commandLog = "logcat --pid $pid -v time -d"

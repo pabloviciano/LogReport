@@ -12,7 +12,7 @@ class LogAdapter : RecyclerView.Adapter<LogAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             LayoutInflater.from(parent.context).inflate(
-                R.layout.view_log_line,
+                R.layout.view_logger_log_line,
                 parent,
                 false
             )
