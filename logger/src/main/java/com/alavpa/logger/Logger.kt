@@ -14,11 +14,11 @@ import android.widget.LinearLayout
 class Logger(layout: Int, activty: Activity, setContentView: (Int) -> Unit) {
 
     init {
-        if (BuildConfig.DEBUG) {
+        //if (BuildConfig.DEBUG) {
             setDebugContentView(activty, layout, setContentView)
-        } else {
-            setContentView(layout)
-        }
+        //} else {
+          //  setContentView(layout)
+        //}
     }
 
     private fun setDebugContentView(
